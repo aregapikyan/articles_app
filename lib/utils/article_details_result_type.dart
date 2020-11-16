@@ -1,0 +1,4 @@
+enum ArticleDetailsResultType {
+  REMOVE,
+  ADD
+}
