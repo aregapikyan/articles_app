@@ -51,6 +51,7 @@ class ContentArticleDetails extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: CustomScrollView(slivers: [
+        // Fixme better to use SliverToBoxAdapter instead of single child sliver view
         SliverList(
             delegate: SliverChildListDelegate.fixed(_sliverListContent())),
         SliverGrid(

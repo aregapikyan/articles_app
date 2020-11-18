@@ -1,16 +1,10 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_app_articles/models/model_article_widget.dart';
-import 'package:flutter_app_articles/repos/repo_articles.dart';
 import 'package:flutter_app_articles/screens/base_state/base_articles_state.dart';
-import 'package:flutter_app_articles/widgets/widget_article.dart';
-import 'package:flutter_app_articles/widgets/widget_dissmissed_background.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
-import 'package:get/get.dart';
 
 class ScreenArticles extends StatefulWidget {
   @override
@@ -96,5 +90,4 @@ class _ScreenArticlesState extends BaseArticlesState<ScreenArticles> {
   void doOnDismissed(int id) {
     articlesRepo.removeArticle(id);
   }
-
 }

@@ -7,6 +7,7 @@ class DismissedBackground extends StatelessWidget {
     return Container(
         padding: EdgeInsets.only(left: 16),
         color: Colors.blueGrey,
+        // Fixme use containers align property
         child: Align(
             alignment: Alignment.centerLeft,
             child: Icon(

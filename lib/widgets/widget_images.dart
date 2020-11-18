@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+// Fixme do not use Widget prefix
 class WidgetImages extends StatelessWidget {
   final List<String> _imageUrls;
 

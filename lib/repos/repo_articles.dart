@@ -64,6 +64,7 @@ class ArticlesRepo {
     }
   }
 
+  // Fixme better to always specify the return type
   writeBookmarks({bool shouldRead = false}) async {
     final file = await _localFile;
     List<ModelArticle> bookmarks = _filteredBookmarks();

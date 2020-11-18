@@ -12,6 +12,7 @@ class UserImage extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(18),
         child: imageUrl.isNotEmpty
+        // Fixme change with placeholder
             ? Image.network(
                 imageUrl,
                 height: 40,

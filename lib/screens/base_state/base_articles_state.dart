@@ -11,6 +11,7 @@ import '../screen_article_details.dart';
 
 abstract class BaseArticlesState<T extends StatefulWidget> extends State<T>
     with AutomaticKeepAliveClientMixin {
+  // Fixme write methods after fields
   Future<dynamic> fetchData();
 
   void doOnDismissed(int id) {}
@@ -34,6 +35,7 @@ abstract class BaseArticlesState<T extends StatefulWidget> extends State<T>
   @override
   bool get wantKeepAlive => true;
 
+  // Fixme call super.build(context)
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +65,7 @@ abstract class BaseArticlesState<T extends StatefulWidget> extends State<T>
 
   Widget _content() {
     if (articleModels.isEmpty) {
+      // Fixme place empty result inside list view
       return Center(
         child: Text(
           noDataText,
@@ -98,7 +101,7 @@ abstract class BaseArticlesState<T extends StatefulWidget> extends State<T>
         MaterialPageRoute(builder: (BuildContext context) {
       return ScreenArticleDetails(article, article.bookmarked);
     }));
-    if (hasBookmarkChanged) {
+    if (hasBookmarkChanged ?? false) {
       articlesRepo.writeBookmarks(shouldRead: hasBookmarkChanged);
     }
   }
